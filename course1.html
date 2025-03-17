@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'mochiy': ['Mochiy Pop One', 'sans-serif'],
+      },
+      fontWeight: {
+        'poppins-100': 100,
+        'poppins-200': 200,
+        'poppins-300': 300,
+        'poppins-400': 400,
+        'poppins-500': 500,
+        'poppins-600': 600,
+        'poppins-700': 700,
+        'poppins-800': 800,
+        'poppins-900': 900,
+
+        'raleway-100':100,
+        'raleway-200':200,
+        'raleway-300':300,
+        'raleway-400':400,
+        'raleway-500':500,
+        'raleway-600':600,
+        'raleway-700':700,
+        'raleway-800':800,
+        'raleway-900':900,
+
+
+        'roboto-100': 100,
+        'roboto-300': 300,
+        'roboto-400': 400,
+        'roboto-500': 500,
+        'roboto-700': 700,
+        'roboto-900': 900,
+      },
+      colors: {
+        primary: '#9f6496',
+        secondary:'#6265ab',
+        terirory:'#e6e4e4'
+      }
+    }
+  }
+}
+    </script>
+    <!-- <link rel="stylesheet" href="input.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            overflow-x: hidden;
+        }
+        .nav-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+        .dot, .dot-expert, .dot-testimonial {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: 1px solid rgb(66, 66, 66);
+      background-color: white; /* Gray-300 */
+      display: inline-block;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: width 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    .dot-testimonial{
+      border: 0.5px solid #9f6496;
+      background-color: #9f6496;
+    }
+
+    .dot.active, .dot-expert.active{
+      width: 80px; /* Make the active dot wider */
+      background-color: #000000;
+      border-radius: 20px; /* Darker color for active dot */
+    }
+    </style>
+</head>
+
+
+      
+<header class="bg-white py-4 px-6"> <!-- Container for the entire header - white background, padding -->
+  <div class="container mx-auto flex justify-between items-center"> <!-- Container to center content, flexbox for layout, center alignment -->
+
+    <!-- Logo Area -->
+    <div class="flex items-center"> <!-- Flex to align logo and text horizontally -->
+      <img src="/assets/Logo.png" alt="Avanzo Academy Logo" class="h-20 w-22"> <!-- Logo image - adjust h-10 and w-12 as needed -->      
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <button class="flex items-center text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
+        <span>Programs</span>
+        <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- (Dropdown Arrow SVG - You'd need to include the actual SVG path here) -->
+          <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Button -->
+    <div>
+      <button class="bg-pink-200 text-gray-700 font-medium rounded-full px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
+        Get Free Demo
+      </button>
+    </div>
+
+  </div>
+</header>
+<div class="bg-gray-100 py-3 text-center text-gray-800 font-medium">
+  Build Your Tech Career - Get a scholarship Before It's Gone! Enroll Now
+</div>
+
+
+<section class="bg-[#843B94] min-h-screen flex items-center justify-center p-10">
+  <div class="max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Text Section -->
+    <div class="text-white space-y-6">
+      <p class="text-sm">Home &gt;</p>
+      <p class="text-lg font-semibold">
+        Certified Program <span class="text-yellow-400">★★★★★</span> ratings
+      </p>
+      <h1 class="text-3xl font-bold uppercase leading-tight">
+        Certificate Course<br> in Cyber Crime &<br> Cyber Law
+      </h1>
+      <p class="text-white">
+        It is a long established fact that a reader <br>will be distracted by the readable content <br>of a page when looking at its layout.
+      </p>
+
+      <div class="flex gap-5 text-lg">
+        <p><span class="font-bold">Course Type:</span> Online</p>
+        <p><span class="font-bold">Placement Support:</span> Placement Assistance</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4">
+        <button class="bg-[#6265AC] px-6 py-3 rounded-full text-white font-semibold hover:bg-blue-600">
+          Enroll Now
+        </button>
+        <button class="border border-white px-6 py-3 rounded-full text-white font-semibold hover:bg-white hover:text-purple-700">
+          View Course Syllabus
+        </button>
+      </div>
+    </div>
+
+    <!-- Image Section with Transparent Background -->
+    <div class="relative">
+      <div class="p-6 ">
+        <img src="assets/firstimg.png" alt="Woman with Laptop" class="w-full">
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="py-12 bg-white"> <!-- Optional background color if the section has a background -->
+  <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">Overview Of Certificate Course In Cyber Crime & Cyber Law</h2>
+      <p class="text-gray-700 mb-8">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur<br> sed fuga error aut velit nulla et amet laudantium est quis saepe.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Column 1 -->
+          <div class="border-r border-[#843B94] pr-8">
+              <h3 class="text-2xl font-semibold text-[#656299] mb-2">Et nihil voluptates</h3>
+              <p class="text-gray-600">Lorem ipsum dolor <br>sit amet. Ea tempo<br>ribus placeat ab <br>officiis dolorem ut <br>libero consequun<br>tur sed fuga error aut velit nulla et</p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="border-r border-[#843B94] pr-8">
+              <h3 class="text-lg font-semibold text-[#656299] mb-2">Et nihil voluptates</h3>
+              <p class="text-gray-600">Lorem ipsum dolor <br>sit amet. Ea tempo<br>ribus placeat ab <br>officiis dolorem ut <br>libero consequun<br>tur sed fuga error aut velit nulla et</p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="border-r border-[#843B94] pr-8">
+            <h3 class="text-lg font-semibold text-[#656299] mb-2">Et nihil voluptates</h3>
+              <p class="text-gray-600">Lorem ipsum dolor <br>sit amet. Ea tempo<br>ribus placeat ab <br>officiis dolorem ut <br>libero consequun<br>tur sed fuga error aut velit nulla et</p>
+          </div>
+      </div>
+<br>
+      <div class="text-center mt-8">
+          <a href="#" class="bg-[#6265AC] hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+              Button Text <!-- Replace with your button text -->
+          </a>
+      </div>
+  </div>
+</section>
+<div class="max-w-3xl mx-auto text-center">
+  <!-- Title -->
+  <h2 class="text-xl font-bold mb-4">Introduction to Cyber Crime & Cyber Law</h2>
+
+  <!-- Video Section -->
+  <div class="flex items-center justify-center gap-6">
+      <!-- Video Placeholder -->
+      <div class="w-2/3 rounded-lg overflow-hidden shadow-lg">
+          <img src="assets/video-thumbnail.jpg" alt="Cyber Crime Video" class="w-full">
+      </div>
+
+      <!-- Description -->
+      <p class="w-1/3 text-gray-700 text-sm text-left">
+          It is a long established fact that a reader will be distracted by the readable 
+          content of a page when looking at its layout. The point of using Lorem Ipsum is 
+          that it has look like readable English.
+      </p>
+  </div>
+
+  <!-- Button -->
+  <div class="mt-6">
+      <a href="#" class="bg-indigo-500 text-white py-2 px-6 rounded-full text-sm shadow-md hover:bg-indigo-600 transition">
+          Download Complete Syllabus
+      </a>
+  </div>
+</div>
