@@ -4,55 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcement</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        'raleway': ['Raleway', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif'],
-        'mochiy': ['Mochiy Pop One', 'sans-serif'],
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+          raleway: ['Raleway', 'sans-serif'],
+          roboto: ['Roboto', 'sans-serif'],
+          mochiy: ['Mochiy Pop One', 'sans-serif'],
+        },
+        colors: {
+          primary: '#9f6496',
+          secondary: '#6265ab',
+          tertiary: '#e6e4e4', /* Corrected 'terirory' */
+        },
       },
-      fontWeight: {
-        'poppins-100': 100,
-        'poppins-200': 200,
-        'poppins-300': 300,
-        'poppins-400': 400,
-        'poppins-500': 500,
-        'poppins-600': 600,
-        'poppins-700': 700,
-        'poppins-800': 800,
-        'poppins-900': 900,
+    },
+  };
+</script>
+  
 
-        'raleway-100':100,
-        'raleway-200':200,
-        'raleway-300':300,
-        'raleway-400':400,
-        'raleway-500':500,
-        'raleway-600':600,
-        'raleway-700':700,
-        'raleway-800':800,
-        'raleway-900':900,
-
-
-        'roboto-100': 100,
-        'roboto-300': 300,
-        'roboto-400': 400,
-        'roboto-500': 500,
-        'roboto-700': 700,
-        'roboto-900': 900,
-      },
-      colors: {
-        primary: '#9f6496',
-        secondary:'#6265ab',
-        terirory:'#e6e4e4'
-      }
-    }
-  }
-}
-    </script>
     <!-- <link rel="stylesheet" href="input.css"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,30 +67,31 @@
     </style>
 </head>
 
-
+<body>
       
 <header class="bg-white py-4 px-6"> <!-- Container for the entire header - white background, padding -->
   <div class="container mx-auto flex justify-between items-center"> <!-- Container to center content, flexbox for layout, center alignment -->
 
     <!-- Logo Area -->
     <div class="flex items-center"> <!-- Flex to align logo and text horizontally -->
-      <img src="/assets/Logo.png" alt="Avanzo Academy Logo" class="h-20 w-22"> <!-- Logo image - adjust h-10 and w-12 as needed -->      
+      <img src="./assets/Logo.png" alt="Avanzo Academy Logo" class="h-20 w-48"> <!-- Logo image - adjust h-10 and w-12 as needed --> 
+      <!-- Navigation -->
+      <nav>
+        <button class="flex items-center max-md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
+          <span>Programs</span>
+          <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- (Dropdown Arrow SVG - You'd need to include the actual SVG path here) -->
+            <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </nav>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-      <button class="flex items-center text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
-        <span>Programs</span>
-        <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- (Dropdown Arrow SVG - You'd need to include the actual SVG path here) -->
-          <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </nav>
+    
 
     <!-- Button -->
     <div>
-      <button class="bg-pink-200 text-gray-700 font-medium rounded-full px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
+      <button class="bg-pink-200 text-gray-700 font-medium rounded-full max-sm:px-1 max-sm:py-0 max-sm:m-2 max-sm:text-sm px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
         Get Free Demo
       </button>
     </div>
@@ -126,9 +100,7 @@
 </header>
       
 
-
- <!-- New Courses Section -->
- <section class="py-8 px-6 max-w-6xl mx-auto">
+<section class="py-8 px-6 max-w-6xl mx-auto">
   <div class="container mx-auto">
     <!-- Navigation Links -->
     <div class="container mx-auto mb-6">
@@ -140,134 +112,353 @@
             <a href="#" class="hover:text-gray-700">Upcoming Events</a>
         </nav>
     </div>
-  <h2 class="text-3xl font-bold text-center mb-2">New Courses</h2>
-  <p class="text-gray-600 text-center mb-6">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga</p>
-  
-  <div class="relative bg-[#9f6496] rounded-lg p-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Card 1 -->
-      <div class="flex flex-col relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
-        <img src="assets/pic 2.png" alt="Cyber Forensic" class="w-full h-40 object-cover">
-        <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
-          <h3 class="text-lg font-semibold text-gray-800">SELF PLACED COURSES</h3>
+
+    <h2 class="text-3xl font-bold text-center mb-2">New Courses</h2>
+    <p class="text-gray-600 text-center mb-6">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga</p>
+
+    <!-- Background Section -->
+    <div class="relative bg-[#9f6496] h-[350px] max-md:h-auto rounded-lg p-6">
+        <div class="z-30 absolute max-md:relative left-1/2 transform -translate-x-1/2 w-[110%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="courses-container">
+            <!-- Card 1 -->
+            <div class="flex flex-col relative bg-white h-[265px] shadow-lg hover:shadow-xl">
+                <img src="assets/pic 4.png" alt="Cyber Forensic" class="w-full h-40 object-cover">
+                <div class="p-4 text-center h-20 flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">SELF PLACED COURSES</h3>
+                </div>
+                <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-[-10px]">
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative h-[265px] bg-white shadow-lg overflow-hidden hover:shadow-xl">
+                <img src="assets/pic 3.png" alt="Digital Evidence" class="w-full h-40 object-cover">
+                <div class="p-4 text-center h-20 flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">SHORT TERM COURSES</h3>
+                </div>
+                <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-[-10px]">
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative h-[265px] bg-white shadow-lg overflow-hidden hover:shadow-xl">
+                <img src="assets/pic 4.png" alt="Cyber Crime" class="w-full h-40 object-cover">
+                <div class="p-4 text-center h-20 flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">CERTIFICATION COURSES</h3>
+                </div>
+                <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-[-10px]">
+            </div>
+
+            <!-- Card 4 -->
+            <div class="relative h-[265px] bg-white shadow-lg overflow-hidden hover:shadow-xl z-30">
+                <img src="assets/pic 5.png" alt="Ethical Hacking" class="w-full h-40 object-cover">
+                <div class="p-4 text-center h-20 flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">DIPLOMA COURSES</h3>
+                </div>
+                <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-[-10px]">
+            </div>
         </div>
-        <!-- Plus Icon -->
-        <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
-      </div>
-      <!-- Card 2 -->
-      <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
-        <img src="assets/pic 3.png" alt="Digital Evidence" class="w-full h-40 object-cover">
-        <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
-          <h3 class="text-lg font-semibold text-gray-800">SHORT TERM COURSES</h3>
-        </div>
-        <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8  flex items-center justify-center -translate-y-1/2">
-      </div>
-          
-         <!-- Card 3 -->
-      <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
-        <img src="assets/pic 4.png" alt="Cyber Crime" class="w-full h-40 object-cover">
-        <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
-          <h3 class="text-lg font-semibold text-gray-800">CERTFICATION COURSES</h3>
-        </div>
-        <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
-      </div>
-          
-           <!-- Card 4 -->
-      <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl z-30">
-        <img src="assets/pic 5.png" alt="Ethical Hacking" class="w-full h-40 object-cover">
-        <div class="p-4 text-center h-40 flex flex-col justify-center align-center ">
-          <h3 class="text-lg font-semibold text-gray-800">DIPLOMA COURSES</h3>
-        </div>
-        <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
-      </div>
     </div>
 
-      
-      <!-- Pagination -->
-      <div class="flex justify-center mt-6 space-x-2">
-          <div class="w-6 h-2 bg-white rounded-full"></div>
-          <div class="w-2 h-2 bg-white bg-opacity-50 rounded-full"></div>
-          <div class="w-2 h-2 bg-white bg-opacity-50 rounded-full"></div>
-      </div>
-  </div>
-  
-  <div class="flex justify-center mt-6">
-      <button class=" bg-[#6469a5] hover:bg-indigo-700 text-white rounded-full px-6 py-3 text-sm">Book your Career Counselling</button>
+    <!-- Dot Pagination (Only Dots) -->
+    <div id="pagination" class="flex justify-center mt-6 space-x-2">
+        <!-- Dots will be dynamically added by JavaScript -->
+    </div>
+
   </div>
 </section>
 
+<script>
+ const coursesPerPage = 4;  // Number of courses per page
+const totalCourses = 8;    // Total number of courses
+let currentPage = 1;      // Start on page 1
+let autoScroll;           // Variable to store auto-scroll interval
+
+// Generate Dots for Pagination
+function generatePagination() {
+    const totalPages = Math.ceil(totalCourses / coursesPerPage);
+    const paginationContainer = document.getElementById("pagination");
+
+    paginationContainer.innerHTML = ""; // Clear existing pagination dots
+
+    for (let i = 1; i <= totalPages; i++) {
+        const dotButton = document.createElement("button");
+        dotButton.textContent = "•";  // The dot character
+        dotButton.classList.add("text-2xl", "text-gray-400", "cursor-pointer", "transition-all", "duration-200", "hover:text-gray-600");
+        dotButton.onclick = () => {
+            clearInterval(autoScroll); // Stop auto-scroll when manually clicked
+            goToPage(i);
+            startAutoScroll(); // Restart auto-scroll
+        };
+        paginationContainer.appendChild(dotButton);
+    }
+
+    updateActiveDot();
+}
+
+// Go to the selected page
+function goToPage(page) {
+    currentPage = page;
+    displayCourses();
+}
+
+// Display the courses corresponding to the current page
+function displayCourses() {
+    const coursesContainer = document.getElementById("courses-container");
+    coursesContainer.innerHTML = "";  // Clear current content
+
+    // Calculate start and end indices based on the current page
+    const startIndex = (currentPage - 1) * coursesPerPage;
+    const endIndex = startIndex + coursesPerPage;
+
+    for (let i = startIndex; i < endIndex && i < totalCourses; i++) {
+        const courseCard = document.createElement("div");
+        courseCard.classList.add("flex", "flex-col", "relative", "bg-white", "h-[265px]", "shadow-lg", "hover:shadow-xl");
+        courseCard.innerHTML = `
+            <img src="assets/pic ${i+1}.png"  class="w-full h-40 object-cover">
+            <div class="p-4 text-center h-20 flex flex-col justify-center">
+                <h3 class="text-lg font-semibold text-gray-800">lorem ipsum</h3>
+            </div>
+            <img src="./assets/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-[-10px]">
+        `;
+        coursesContainer.appendChild(courseCard);
+    }
+
+    // Update dots when the page changes
+    generatePagination();
+}
+
+// Update active dot color to indicate the current page
+function updateActiveDot() {
+    const dots = document.querySelectorAll("#pagination button");
+    dots.forEach((dot, index) => {
+        if (index === currentPage - 1) {
+            dot.classList.add("text-gray-600"); // Active dot
+            dot.classList.remove("text-gray-400");
+        } else {
+            dot.classList.remove("text-gray-600");
+            dot.classList.add("text-gray-400");
+        }
+    });
+}
+
+// Auto-scroll function
+function startAutoScroll() {
+    autoScroll = setInterval(() => {
+        currentPage = currentPage < Math.ceil(totalCourses / coursesPerPage) ? currentPage + 1 : 1; // Loop back
+        displayCourses();
+    }, 4000); // Change page every 4 seconds
+}
+
+// Initialize the first page
+displayCourses();
+startAutoScroll(); // Start auto-scroll on load
+
+</script>
 
 
-
-      
-
-  
+    <!-- Button Below -->
+    <div class="flex justify-center mt-6">
+        <button class="bg-[#6469a5] hover:bg-indigo-700 text-white rounded-full px-6 py-3 text-sm">
+            Book your Career Counselling
+        </button>
+    </div>
 <!-- Upcoming Events Section -->
 <section class="py-8 px-6 max-w-6xl mx-auto">
   <h2 class="text-3xl font-bold text-center mb-2">Upcoming Events</h2>
   <p class="text-gray-600 text-center mb-6">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga</p>
   
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+  <!-- Slider Container -->
+  <div class="relative ">
+    <!-- Slider Track -->
+    <div id="sliderTrack" class="flex transition-transform duration-300 ease-in-out">
       <!-- Event 1 -->
-      <div class="relative">
+      <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] p-2">
+        <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
-              <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
-                  <div class="text-sm">FEB</div>
-                  <div class="text-xl font-bold">02</div>
-              </div>
-          </div>
-          <div class="bg-[#833d91] text-white py-2 px-4">
-              <h3 class="font-bold">WEBINAR</h3>
-          </div>
+            <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
+              <div class="text-sm">FEB</div>
+              <div class="text-xl font-bold">02</div>
+            </div>
+            <div class="bg-[#833d91] w-full  text-white py-2 px-4 transform absolute top-[65%] -translate-x-4 rounded-lg">
+              <a href="webinarpage.html" target="_blank">WEBINAR</a> 
+            </div>     
+          </div>     
           <div class="bg-white p-4 rounded-b-lg shadow-md">
-              <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
-              <button class="bg-[#d190af] hover:bg-pink-600 text-white  px-4 py-1 text-xs">Register Now</button>
+            <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
+            <button class="bg-[#d190af] hover:bg-pink-600 text-white px-4 py-1 text-xs">Register Now</button>
           </div>
+        </div>
       </div>
       
       <!-- Event 2 -->
-      <div class="relative">
+      <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] p-2">
+        <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
-              <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
-                  <div class="text-sm">FEB</div>
-                  <div class="text-xl font-bold">02</div>
-              </div>
-          </div>
-          <div class="bg-[#833d91] text-white py-2 px-4">
-              <h3 class="font-bold">WEBINAR</h3>
-          </div>
+            <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
+              <div class="text-sm">FEB</div>
+              <div class="text-xl font-bold">02</div>
+            </div>
+            <div class="bg-[#833d91] w-full  text-white py-2 px-4 transform absolute top-[65%] -translate-x-2 rounded-lg">
+              <a href="webinarpage.html" target="_blank">WEBINAR</a> 
+            </div>     
+          </div>     
           <div class="bg-white p-4 rounded-b-lg shadow-md">
-              <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
-              <button class="bg-[#d190af] hover:bg-pink-600 text-white  px-4 py-1 text-xs">Register Now</button>
+            <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
+            <button class="bg-[#d190af] hover:bg-pink-600 text-white px-4 py-1 text-xs">Register Now</button>
           </div>
+        </div>
       </div>
-      
+            
       <!-- Event 3 -->
-      <div class="relative">
+      <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%] p-2">
+        <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
-              <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
-                  <div class="text-sm">FEB</div>
-                  <div class="text-xl font-bold">02</div>
-              </div>
-          </div>
-          <div class="bg-[#833d91] text-white py-2 px-4">
-              <h3 class="font-bold">WEBINAR</h3>
-          </div>
+            <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
+              <div class="text-sm">FEB</div>
+              <div class="text-xl font-bold">02</div>
+            </div>
+            <div class="bg-[#833d91] w-full  text-white py-2 px-4 transform absolute top-[65%] -translate-x-2 rounded-lg">
+              <a href="webinarpage.html" target="_blank">WEBINAR</a> 
+            </div>     
+          </div>     
           <div class="bg-white p-4 rounded-b-lg shadow-md">
-              <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
-              <button class="bg-[#d190af] hover:bg-pink-600 text-white  px-4 py-1 text-xs">Register Now</button>
+            <p class="text-sm mb-4">Lorem ipsum dolor sit amet, a temporibus placeat ab officiis</p>
+            <button class="bg-[#d190af] hover:bg-pink-600 text-white px-4 py-1 text-xs">Register Now</button>
           </div>
+        </div>
       </div>
+    </div>
   </div>
   
   <!-- Pagination -->
-  <div class="flex justify-center space-x-2">
-      <div class="w-6 h-2 bg-purple-600 rounded-full"></div>
-      <div class="w-2 h-2 bg-purple-300 rounded-full"></div>
-      <div class="w-2 h-2 bg-purple-300 rounded-full"></div>
+  <div class="flex justify-center space-x-2 mt-6">
+    <button id="prevBtn" class="w-6 h-2 bg-purple-600 rounded-full"></button>
+    <button id="nextBtn" class="w-6 h-2 bg-purple-300 rounded-full"></button>
   </div>
 </section>
-
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const sliderTrack = document.getElementById('sliderTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentPosition = 0;
+  let currentSlide = 0;
+  let autoScrollInterval;
+  const totalSlides = document.querySelectorAll('#sliderTrack > div').length;
+  
+  // Update pagination indicators
+  const updatePagination = () => {
+    // Reset all buttons to inactive state
+    document.querySelectorAll('[id^="pageBtn"]').forEach(btn => {
+      btn.classList.remove('bg-purple-600');
+      btn.classList.add('bg-purple-300');
+    });
+    
+    // Set active button
+    const activeBtn = document.getElementById(`pageBtn${currentSlide}`);
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-purple-300');
+      activeBtn.classList.add('bg-purple-600');
+    }
+  };
+  
+  // Function to move to a specific slide
+  const moveToSlide = (slideIndex) => {
+    // Get the current viewport width
+    const viewportWidth = window.innerWidth;
+    let slideWidth;
+    
+    // Determine slide width based on responsive breakpoints
+    if (viewportWidth >= 1024) { // lg breakpoint
+      slideWidth = 100 / 3; // 33.33%
+    } else if (viewportWidth >= 768) { // md breakpoint
+      slideWidth = 50; // 50%
+    } else {
+      slideWidth = 100; // 100%
+    }
+    
+    currentSlide = slideIndex;
+    
+    // Calculate the translation distance
+    const translateX = -(slideWidth * currentSlide);
+    sliderTrack.style.transform = `translateX(${translateX}%)`;
+    
+    updatePagination();
+  };
+  
+  // Function to move to the next slide
+  const moveNext = () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    moveToSlide(currentSlide);
+  };
+  
+  // Function to move to the previous slide
+  const movePrev = () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    moveToSlide(currentSlide);
+  };
+  
+  // Auto-scroll functionality
+  const startAutoScroll = () => {
+    stopAutoScroll(); // Clear any existing interval first
+    autoScrollInterval = setInterval(moveNext, 3000); // Move to the next slide every 3 seconds
+  };
+  
+  // Stop auto-scroll
+  const stopAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+  };
+  
+  // Create pagination indicators dynamically
+  const createPaginationButtons = () => {
+    const paginationContainer = document.querySelector('.flex.justify-center.space-x-2');
+    
+    // Clear existing buttons
+    paginationContainer.innerHTML = '';
+    
+    // Create a button for each slide
+    for (let i = 0; i < totalSlides; i++) {
+      const button = document.createElement('button');
+      button.id = `pageBtn${i}`;
+      button.className = `w-6 h-2 ${i === 0 ? 'bg-purple-600' : 'bg-purple-300'} rounded-full`;
+      
+      button.addEventListener('click', () => {
+        moveToSlide(i);
+        stopAutoScroll();
+        startAutoScroll(); // Restart auto-scroll after manual navigation
+      });
+      
+      paginationContainer.appendChild(button);
+    }
+  };
+  
+  // Initialize pagination
+  createPaginationButtons();
+  
+  // Event listeners for prev/next buttons
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'prevBtn' || e.target.closest('#prevBtn')) {
+      movePrev();
+      stopAutoScroll();
+      startAutoScroll(); // Restart auto-scroll after manual navigation
+    } else if (e.target.id === 'nextBtn' || e.target.closest('#nextBtn')) {
+      moveNext();
+      stopAutoScroll();
+      startAutoScroll(); // Restart auto-scroll after manual navigation
+    }
+  });
+  
+  // Pause auto-scroll when user hovers over the slider
+  sliderTrack.addEventListener('mouseenter', stopAutoScroll);
+  sliderTrack.addEventListener('mouseleave', startAutoScroll);
+  
+  // Handle window resize events to ensure the slider works correctly at different screen sizes
+  window.addEventListener('resize', () => {
+    moveToSlide(currentSlide); // Recalculate position based on current viewport
+  });
+  
+  // Start auto-scroll when the page loads
+  startAutoScroll();
+});
+</script>
 <div>
   
   <section class="bg-[#382364] py-16 text-white">
@@ -302,28 +493,26 @@
         <!-- Thumbnails Container -->
         <div id="thumbnails-container" class="flex transition-transform duration-500 ease-in-out">
           <!-- Newsletter Thumbnail 1 -->
-          <div class="rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
-            <img src="assets/new1.png" alt="Newsletter Thumbnail 1" class="w-full block">
+          <div class=" rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
+            <img src="assets/new1.png" alt="Newsletter Thumbnail 1" class="w-[90%] block">
           </div>
           <!-- Newsletter Thumbnail 2 (Larger) -->
-          <div class="rounded-md overflow-hidden shadow-md transform scale-110 relative z-10 flex-shrink-0 w-1/3 p-2">
-            <img src="assets/new2.png" alt="Newsletter Thumbnail 2" class="w-full block">
+          <div class=" rounded-md overflow-hidden shadow-md transform scale-110 relative z-10 flex-shrink-0 w-1/3 p-2">
+            <img src="assets/new2.png" alt="Newsletter Thumbnail 2" class="w-[90%] block">
           </div>
           <!-- Newsletter Thumbnail 3 -->
           <div class="rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
-            <img src="assets/news3.png" alt="Newsletter Thumbnail 3" class="w-full block">
+            <img src="assets/news3.png" alt="Newsletter Thumbnail 3" class="w-[90%] block">
           </div>
-          <!-- Newsletter Thumbnail 4 -->
-          <div class="rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
-            <img src="assets/new1.png" alt="Newsletter Thumbnail 4" class="w-full block">
+          <!-- Repeat the same thumbnails for the slider effect -->
+          <div class=" rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
+            <img src="assets/news3.png" alt="Newsletter Thumbnail 3" class="w-[90%] block">
           </div>
-          <!-- Newsletter Thumbnail 5 -->
-          <div class="rounded-md overflow-hidden shadow-md  transform scale-110 relative z-10  flex-shrink-0 w-1/3 p-2">
-            <img src="assets/new2.png" alt="Newsletter Thumbnail 5" class="w-full block">
+          <div class="rounded-md overflow-hidden shadow-md transform scale-110 relative z-10 flex-shrink-0 w-1/3 p-2">
+            <img src="assets/new2.png" alt="Newsletter Thumbnail 2" class="w-[90%] block">
           </div>
-          <!-- Newsletter Thumbnail 6 -->
-          <div class="rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
-            <img src="assets/news3.png" alt="Newsletter Thumbnail 6" class="w-full block">
+          <div class=" rounded-md overflow-hidden shadow-md flex-shrink-0 w-1/3 p-2">
+            <img src="assets/new1.png" alt="Newsletter Thumbnail 4" class="w-[90%] block">
           </div>
         </div>
   
@@ -335,41 +524,45 @@
       </div>
     </div>
   </section>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const thumbnailsContainer = document.getElementById('thumbnails-container');
-      const prevButton = document.getElementById('prev-button');
-      const nextButton = document.getElementById('next-button');
-      let scrollPosition = 0;
-      const thumbnailWidth = thumbnailsContainer.clientWidth / 3; // Width of one thumbnail
+<script>document.addEventListener('DOMContentLoaded', function () {
+  const thumbnailsContainer = document.getElementById('thumbnails-container');
+  const prevButton = document.getElementById('prev-button');
+  const nextButton = document.getElementById('next-button');
   
-      // Auto-scroll functionality
-      const autoScroll = setInterval(() => {
-        scrollPosition += thumbnailWidth * 3; // Scroll by 3 thumbnails (one row)
-        if (scrollPosition >= thumbnailsContainer.scrollWidth) {
-          scrollPosition = 0; // Reset to the first row
-        }
-        thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
-      }, 3000); // Adjust the interval (in milliseconds) as needed
-  
-      // Next button click
-      nextButton.addEventListener('click', () => {
-        scrollPosition += thumbnailWidth * 3; // Scroll by 3 thumbnails (one row)
-        if (scrollPosition >= thumbnailsContainer.scrollWidth) {
-          scrollPosition = 0; // Reset to the first row
-        }
-        thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
-      });
-  
-      // Previous button click
-      prevButton.addEventListener('click', () => {
-        scrollPosition -= thumbnailWidth * 3; // Scroll back by 3 thumbnails (one row)
-        if (scrollPosition < 0) {
-          scrollPosition = thumbnailsContainer.scrollWidth - thumbnailWidth * 3; // Go to the last row
-        }
-        thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
-      });
-    });
+  let scrollPosition = 0;
+  const thumbnailWidth = thumbnailsContainer.clientWidth / 3; // Width of one thumbnail
+
+  // Get the total scrollable width of the container
+  const totalWidth = thumbnailsContainer.scrollWidth;
+
+  // Auto-scroll functionality
+  const autoScroll = setInterval(() => {
+    scrollPosition += thumbnailWidth * 3; // Scroll by 3 thumbnails (one row)
+    if (scrollPosition >= totalWidth) {
+      scrollPosition = 0; // Reset to the first row
+    }
+    thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
+  }, 3000); // Adjust the interval (in milliseconds) as needed
+
+  // Next button click
+  nextButton.addEventListener('click', () => {
+    scrollPosition += thumbnailWidth * 2; // Scroll by 3 thumbnails (one row)
+    if (scrollPosition >= totalWidth) {
+      scrollPosition = 0; // Reset to the first row
+    }
+    thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+
+  // Previous button click
+  prevButton.addEventListener('click', () => {
+    scrollPosition -= thumbnailWidth * 3; // Scroll back by 3 thumbnails (one row)
+    if (scrollPosition < 0) {
+      scrollPosition = totalWidth - thumbnailWidth * 3; // Go to the last row
+    }
+    thumbnailsContainer.style.transform = `translateX(-${scrollPosition}px)`;
+  });
+});
+</script>  
   </script>
           
 
@@ -415,15 +608,16 @@
 
                 <div class="flex w-[200px]  flex-col align-center">
                   <img src="assets/girl.png" alt="">
-                  <p class="text-center text-black">Name</p>
-                  <p class="text-center text-black">Front Desk Staff</p>
-
+                  <div class="px-3 py-2 bg-pink-400/50 rounded-2xl">
+                  <p class="text-center text-white font-semibold">Name</p>
+                  <p class="text-center text-white">Front Desk Staff</p>
+                  </div>  
                 </div>
             
                 <!-- Contact -->
                 <div>
                   <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                  <p>AVANZO Cyber Security<br>NRA – 89, Whitefield,<br>Puthurkkara, Ayyanthole, Thrissur 680003</p>
+                  <p>AVANZO CYBER ACADEMY<br>NRA – 89, Whitefield,<br>Puthurkkara, Ayyanthole, Thrissur 680003</p>
                   <p class="mt-4">
                     <a href="tel:+917356111128" class="block hover:underline">+91 73561 11128</a>
                     <a href="mailto:info@avanzosolutions.in" class="block hover:underline">info@avanzosolutions.in</a>
@@ -436,8 +630,7 @@
                   <!-- Cyber Logo -->
                   <img src="assets/cyber.png" alt="Cyber Logo" class="w-24 h-20 mx-auto mb-4">
               
-                  <!-- Download Button
-                  <button class="px-6 md:px-8 py-3 md:py-4 bg-secondary text-white rounded-lg hover:bg-tertiary transition-colors">
+                  <!-- <button class="px-6 md:px-8 py-3 md:py-4 bg-secondary text-white rounded-lg hover:bg-tertiary transition-colors">
                       Subscribe Now / 
                   </button> -->
                   <h3 class="text-lg font-semibold mb-4">Download CyberHulk</h3>
@@ -455,8 +648,5 @@
                 <a href="https://avanzodesign.in" class="hover:underline text-white">avanzodesign.in</a>
               </p>
             </div>
-            
-
-      
 </body>
 </html>
